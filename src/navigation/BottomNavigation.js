@@ -3,9 +3,9 @@ import { StyleSheet, Text, View } from 'react-native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 
 import { createStackNavigator } from '@react-navigation/stack';
-import HomeScreen from '../screens/Home/home_screen';
-import SearchScreen from '../screens/Seacrch/search_screen';
-import ArtistAlbum from '../screens/Albums/Artist_album';
+import HomeScreen from '../screens/home/home_screen';
+import SearchScreen from '../screens/seacrch/search_screen';
+import ArtistAlbum from '../screens/albums/Artist_album';
 import { useTheme } from '@react-navigation/native';
 import { constants } from '../assets/constants/constants';
 import { Ionicons, MaterialIcons } from '@expo/vector-icons';

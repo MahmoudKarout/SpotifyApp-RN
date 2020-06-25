@@ -1,16 +1,16 @@
 
 import React, { useEffect, useState, useRef } from 'react';
 import { StyleSheet, View, StatusBar } from 'react-native';
-import { ArtistCard } from '../../components/ArtistCard/ArtistCard';
-import SearchBar from '../../components/SearchBar/SearchBar';
+import { ArtistCard } from '../../components/artistCard/ArtistCard';
+import SearchBar from '../../components/searchBar/SearchBar';
 import Axios from 'axios';
-import { GridViewRender } from '../../components/GridView/GridList';
+import { GridViewRender } from '../../components/gridView/GridList';
 import { constants } from '../../assets/constants/constants';
 import * as AuthAction from '../../redux/actions/Authorisation';
 import Credentials from '../../utils/config';
 import { useDispatch } from 'react-redux';
-import ErrorButton from '../../components/ErrorButton/ErrorButton';
-import DATA_Requests from '../../API/Data_Api';
+import ErrorButton from '../../components/errorButton/ErrorButton';
+import DATA_Requests from '../../api/Data_Api';
 import { useTheme } from '@react-navigation/native';
 import { styles } from './Search_styles';
 

@@ -2,7 +2,7 @@ import React from 'react';
 
 import { createDrawerNavigator } from '@react-navigation/drawer';
 import BottomTabScreens from './BottomNavigation'
-import { DrawerContent } from '../components/Drawer/DrawerContent';
+import { DrawerContent } from '../components/drawer/DrawerContent';
 
 const Drawer = createDrawerNavigator();
 

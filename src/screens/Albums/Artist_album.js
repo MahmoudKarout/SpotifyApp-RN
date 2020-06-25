@@ -1,8 +1,8 @@
 
 import React, { useEffect, useState } from 'react';
 import { StyleSheet, View, FlatList } from 'react-native';
-import { AlbumCard } from '../../components/AlbumCard/AlbumCard';
-import DATA_Requests from '../../API/Data_Api';
+import { AlbumCard } from '../../components/albumCard/AlbumCard';
+import DATA_Requests from '../../api/Data_Api';
 
 
 

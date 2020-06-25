@@ -9,10 +9,10 @@ import Loader from '../../components/Loader';
 import { useDispatch } from 'react-redux';
 import types from '../../redux/actions/types';
 
-import UserInfo from '../../components/UserInfo/UserInfo';
+import UserInfo from '../../components/userInfo/UserInfo';
 import i18n from 'i18n-js';
-import DATA_Requests from '../../API/Data_Api';
-import TopInfo from '../../components/TopInfo/TopInfo';
+import DATA_Requests from '../../api/Data_Api';
+import TopInfo from '../../components/topInfo/TopInfo';
 
 
 

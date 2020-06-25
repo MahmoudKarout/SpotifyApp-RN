@@ -2,7 +2,7 @@ import React from 'react';
 import { Text, View, Image, FlatList, ScrollView } from 'react-native';
 import { useTheme } from '@react-navigation/native';
 import { constants } from '../../assets/constants/constants';
-import { styles } from '../../components/TopInfo/TopInfo_styles'
+import { styles } from '../../components/topInfo/TopInfo_styles'
 
 
 

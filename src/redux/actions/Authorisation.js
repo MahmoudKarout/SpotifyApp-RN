@@ -1,5 +1,5 @@
 
-import AUTH_Requests from '../../API/Auth_Api';
+import AUTH_Requests from '../../api/Auth_Api';
 import { setUserInfo, setUserRefresh } from '../../utils/AsyncStorageAPI';
 import types from './types';
 
