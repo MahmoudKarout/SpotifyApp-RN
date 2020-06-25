@@ -19,7 +19,7 @@ export const styles = StyleSheet.create({
         flex: 1,
         marginHorizontal: 10,
         fontFamily: constants.Fonts.CCBook,
-        color: Platform.OS == 'android' ? 'white' : 'white'
+        color: Platform.OS == 'android' ? 'white' : 'black'
 
     },
     iconBox: {

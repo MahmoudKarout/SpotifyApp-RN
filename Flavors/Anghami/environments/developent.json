@@ -1,0 +1,4 @@
+{
+  "AUTH_API": "https://accounts.spotify.com",
+  "DATA_API": "https://api.spotify.com/v1"
+}

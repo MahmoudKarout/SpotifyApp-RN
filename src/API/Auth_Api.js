@@ -1,6 +1,9 @@
 import API from './BaseApi';
 import Credentials from '../utils/config';
 import { getUserInfo } from '../utils/AsyncStorageAPI';
+import * as AuthSession from 'expo-auth-session';
+import { AUTH_API } from './env.json'
+import { constants } from '../assets/constants/constants';
 
 
 
@@ -9,16 +12,17 @@ export default AUTH_Requests = {
     async API_LoginAction() {
         const authorizationCode = await API.getAuthorizationCode(Credentials);
         const creds64 = API.getEncodedCredsB64(Credentials);
-
+        console.log(AUTH_API + Api_calls.Authorization.token_request)
         if (Platform.OS == 'android') {
-            body = `grant_type=authorization_code&code=${authorizationCode}&redirect_uri=https://auth.expo.io/@mahmoudkarout/SpotifyAppLast`;
-
+            body = `grant_type=authorization_code&code=${authorizationCode}&redirect_uri=${AuthSession.getRedirectUrl()}`;
         } else {
             body = `grant_type=authorization_code&code=${authorizationCode}&redirect_uri=${Credentials.redirectUri}`;
         }
+
+
         let options =
         {
-            url: Credentials.authTokenUrl,
+            url: AUTH_API + Api_calls.Authorization.token_request,
             method: 'POST',
             headers: API.AuthHeaders(creds64),
             data: body
@@ -36,7 +40,7 @@ export default AUTH_Requests = {
 
         let options =
         {
-            url: Credentials.authTokenUrl,
+            url: AUTH_API + Api_calls.Authorization.token_request,
             method: 'POST',
             headers: API.AuthHeaders(creds64),
             data: body

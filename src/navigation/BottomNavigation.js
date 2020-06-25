@@ -20,9 +20,13 @@ const ProfileTabs = createStackNavigator();
 
 const SearchTab = () => (
     <Tabs2.Navigator screenOptions={{
-        headerStyle: { shadowColor: 'transparent' },
+        headerStyle: {
+            shadowColor: 'transparent',
+            shadowColor: 'transparent',
+            elevation: 0,
+        },
         headerTitleStyle: {
-            fontFamily: constants.CCBold,
+            fontFamily: constants.Fonts.CCBold,
         },
     }} >
         <Tabs2.Screen name={constants.Navigation.Tab2_Title} component={SearchScreen} />
@@ -30,11 +34,6 @@ const SearchTab = () => (
             options={({ route }) => ({
                 title: route.params.artistName + "'s Albums",
                 headerBackTitle: null,
-
-
-
-
-
             })} />
     </Tabs2.Navigator >
 
@@ -43,7 +42,10 @@ const ProfileTab = () => {
     const { colors, logo } = useTheme();
     return (
         <ProfileTabs.Navigator screenOptions={{
-            headerStyle: { shadowColor: 'transparent' },
+            headerStyle: {
+                shadowColor: 'transparent',
+                elevation: 0, // remove shadow on Android
+            },
             headerTitleStyle: {
 
                 fontFamily: constants.Fonts.CCBold,
@@ -54,6 +56,8 @@ const ProfileTab = () => {
                 title: constants.Navigation.Tab1_Title,
                 headerStyle: {
                     // backgroundColor: colors.background,
+                    shadowColor: 'transparent',
+                    elevation: 0,
 
                 },
 
@@ -67,6 +71,7 @@ const ProfileTab = () => {
         </ProfileTabs.Navigator >
     );
 }
+
 
 export default BottomTabScreens = () => {
 

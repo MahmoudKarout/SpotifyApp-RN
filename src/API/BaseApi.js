@@ -2,10 +2,8 @@ import { Base64 } from 'js-base64';
 import * as AuthSession from 'expo-auth-session';
 import { Platform } from 'react-native';
 import axios from 'axios';
-// import { AUTH_ENDPOINT } from '../../env.json';
-// import Store from '../../redux/store/store';
-
-// import * as AuthAction from '../../redux/actions/Authorisation';
+import { AUTH_API } from './env.json';
+import Api_calls from '../assets/constants/Api_calls';
 
 const scopesArr = ['', 'user-modify-playback-state', 'user-read-currently-playing', 'user-read-playback-state', 'user-library-modify',
     'user-library-read', 'playlist-read-private', 'playlist-read-collaborative', 'playlist-modify-public',
@@ -18,7 +16,7 @@ export default API = {
 
     async getAuthorizationCode(Credential) {
 
-        let url = 'https://accounts.spotify.com' + '/authorize';
+        let url = AUTH_API + `${Api_calls.Authorization.authentication}`;
 
         let result = ''
         try {
@@ -32,7 +30,7 @@ export default API = {
                         Credential.clientId +
                         (scopes ? '&scope=' + encodeURIComponent(scopes) : '') +
                         '&redirect_uri=' +
-                        encodeURIComponent('https://auth.expo.io/@mahmoudkarout/SpotifyAppLast'),
+                        encodeURIComponent(AuthSession.getRedirectUrl()),
                 });
 
                 return result.params.code;

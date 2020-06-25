@@ -5,11 +5,13 @@ import AppContainer from './src/components/AppContainer';
 import './src/utils/localization/i18n';
 
 
+
 class App extends Component {
 
   render() {
 
     return (
+
       <Provider store={Store} >
         <AppContainer />
       </Provider >

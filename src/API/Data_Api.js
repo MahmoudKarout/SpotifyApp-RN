@@ -3,6 +3,8 @@ import Axios from 'axios';
 import Api_calls from '../assets/constants/Api_calls';
 
 import { getUserInfo } from '../utils/AsyncStorageAPI';
+import { DATA_API } from './env.json';
+
 
 
 
@@ -24,7 +26,7 @@ export default DATA_Requests = {
         {
             url: Api_calls.Data(query, '', offset).search_artist,
             method: Api_calls.methods.GET,
-            baseURL: Api_calls.Data().base_url,
+            baseURL: DATA_API,
             cancelToken: cancel.token,
             headers: API.DataHeaders(accessToken),
         }
@@ -38,7 +40,7 @@ export default DATA_Requests = {
         {
             url: Api_calls.Data('', id, '').artists_albums,
             method: Api_calls.methods.GET,
-            baseURL: Api_calls.Data().base_url,
+            baseURL: DATA_API,
 
             headers: API.DataHeaders(accessToken),
         }
@@ -51,7 +53,7 @@ export default DATA_Requests = {
         let Main_options =
         {
             method: Api_calls.methods.GET,
-            baseURL: Api_calls.Data().base_url,
+            baseURL: DATA_API,
             headers: API.DataHeaders(accessToken),
         }
         let user_options = {
