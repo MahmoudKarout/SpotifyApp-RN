@@ -97,41 +97,10 @@ export default API = {
             return response
         }, error => {
 
-            //     // const {
-            //     //     config,
-            //     //     response: { status, data }
-            //     // } = error;
 
-            //     // const originalRequest = config;
-
-            //     // if (status == 401) {
-
-            //     //     if (!Refreshing) {
-            //     //         isRefreshing = true;
-            //     //         console.log("Refreshing")
-            //     //         Store.dispatch(AuthAction.RefreshTokenAction());
-            //     //     }
-            //     //     isRefreshing = false;
-            //     //     requests = [];
-            //     //     const Oldrequest = new Promise(resolve => {
-            //     //         requestTokenRefresh(() => {
-            //     //             resolve(axios(originalRequest));
-            //     //         });
-            //     //     });
-            //     //     onRefreshed();
-            //     //     return Oldrequest;
-            //     // } else {
             return Promise.reject(error);
-            //  }
+
         });
-
-        // function requestTokenRefresh(cb) {
-        //     requests.push(cb);
-
-        // }
-        // function onRefreshed() {
-        //     requests.map(cb => cb());
-        // }
 
 
         return client(options);
